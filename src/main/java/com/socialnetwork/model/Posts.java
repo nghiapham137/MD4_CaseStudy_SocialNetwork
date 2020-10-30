@@ -1,6 +1,8 @@
 package com.socialnetwork.model;
 
+import com.socialnetwork.repository.post.PostRepository;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -20,4 +22,5 @@ public class Posts {
     @JoinColumn(name = "author")
     private App_User author;
     private String notification;
+
 }
