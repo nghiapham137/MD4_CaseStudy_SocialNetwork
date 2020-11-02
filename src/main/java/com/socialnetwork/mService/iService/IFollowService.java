@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface IFollowService {
     Optional<Follow> findAllFollow();
     Follow findFollowById(Long id);
-    void saveFollow(Follow follow);
+    Follow saveFollow(Follow follow);
     void removeFollowById(Long id);
 }

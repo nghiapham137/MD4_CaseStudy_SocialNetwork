@@ -7,6 +7,6 @@ import java.util.Optional;
 public interface ILikeService {
     Optional<Likes> findAllLike();
     Likes findLikeById(Long id);
-    void saveLike(Likes Likes);
+    Likes saveLike(Likes Likes);
     void removeLikeById(Long id);
 }

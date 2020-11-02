@@ -7,6 +7,6 @@ import java.util.Optional;
 public interface IDislikeService {
     Optional<Dislikes> findAllDislike();
     Dislikes findDislikeById(Long id);
-    void saveDislike(Dislikes dislikes);
+    Dislikes saveDislike(Dislikes dislikes);
     void removeDislikeById(Long id);
 }

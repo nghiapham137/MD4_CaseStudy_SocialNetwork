@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface ICommentService {
     Optional<Comments> findAllComments();
-    Optional<Comments> findCommentsById(Long id);
+    Comments findCommentsById(Long id);
     Comments saveComments(Comments comments);
     void removeCommentsById(Long id);
 }

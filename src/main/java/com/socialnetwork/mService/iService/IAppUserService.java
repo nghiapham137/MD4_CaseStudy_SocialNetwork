@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface IAppUserService {
         Iterable<App_User> findAllAppUser();
-        Optional<App_User> findAppUserById(Long id);
+        App_User findAppUserById(Long id);
         void save(App_User user);
         void remove(Long id);
 }
