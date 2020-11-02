@@ -13,22 +13,22 @@ public class LikeService implements ILikeService {
     private LikeRepository likeRepository;
 
     @Override
-    public Optional<Likes> findAllLike() {
-        return likeRepository.findAllLikes();
+    public Iterable<Likes> iFindAll() {
+        return likeRepository.findAll();
     }
 
     @Override
-    public Likes findLikeById(Long id) {
-        return likeRepository.findLikesById(id);
+    public Optional<Likes> iFindById(Long id) {
+        return likeRepository.findById(id);
     }
 
     @Override
-    public Likes saveLike(Likes likes) {
-        return likeRepository.save(likes);
+    public Likes iSave(Likes like) {
+        return likeRepository.save(like);
     }
 
     @Override
-    public void removeLikeById(Long id) {
+    public void iRemove(Long id) {
         likeRepository.deleteById(id);
     }
 }

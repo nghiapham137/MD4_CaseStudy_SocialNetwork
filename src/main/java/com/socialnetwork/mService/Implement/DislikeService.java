@@ -13,22 +13,22 @@ public class DislikeService implements IDislikeService {
     private DislikeRepository dislikeRepository;
 
     @Override
-    public Optional<Dislikes> findAllDislike() {
-        return dislikeRepository.findAllDislikes();
+    public Iterable<Dislikes> iFindAll() {
+        return dislikeRepository.findAll();
     }
 
     @Override
-    public Dislikes findDislikeById(Long id) {
-        return dislikeRepository.findDislikesById(id);
+    public Optional<Dislikes> iFindById(Long id) {
+        return dislikeRepository.findById(id);
     }
 
     @Override
-    public Dislikes saveDislike(Dislikes dislikes) {
+    public Dislikes iSave(Dislikes dislikes) {
         return dislikeRepository.save(dislikes);
     }
 
     @Override
-    public void removeDislikeById(Long id) {
+    public void iRemove(Long id) {
         dislikeRepository.deleteById(id);
     }
 }

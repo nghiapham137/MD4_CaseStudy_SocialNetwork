@@ -5,8 +5,8 @@ import com.socialnetwork.model.App_Role;
 import java.util.Optional;
 
 public interface IAppRoleService {
-    Optional<App_Role> findAllAppRole();
-    App_Role findAppRoleById(Long id);
-    void saveApp_Role (App_Role app_role);
-    void removeApp_Role (Long id);
+    Iterable<App_Role> iFindAll();
+    Optional<App_Role> iFindById(Long id);
+    void iSave (App_Role app_role);
+    void iRemove (Long id);
 }

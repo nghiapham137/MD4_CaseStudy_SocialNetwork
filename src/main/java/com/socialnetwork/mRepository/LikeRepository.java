@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface LikeRepository extends CrudRepository<Likes, Long> {
-    Optional<Likes> findAllLikes();
-    Likes findLikesById(Long id);
+    Iterable<Likes> findAll();
+    Optional<Likes> findById(Long id);
 }

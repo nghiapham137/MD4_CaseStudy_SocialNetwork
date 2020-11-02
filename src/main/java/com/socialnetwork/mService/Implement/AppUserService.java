@@ -1,6 +1,5 @@
 package com.socialnetwork.mService.Implement;
 
-import com.socialnetwork.mRepository.AppRoleRepository;
 import com.socialnetwork.mRepository.AppUserRepository;
 import com.socialnetwork.mService.iService.IAppUserService;
 import com.socialnetwork.model.App_User;
@@ -13,26 +12,24 @@ public class AppUserService implements IAppUserService {
     @Autowired
     private AppUserRepository appUserRepository;
 
-    @Autowired
-    private AppRoleRepository appRoleRepository;
 
     @Override
-    public Iterable<App_User> findAllAppUser() {
+    public Iterable<App_User> iFindAll() {
         return appUserRepository.findAll();
     }
 
     @Override
-    public App_User findAppUserById(Long id) {
-        return appUserRepository.findApp_UserById(id);
+    public Optional<App_User> iFindById(Long id) {
+        return appUserRepository.findById(id);
     }
 
     @Override
-    public void save(App_User user) {
+    public void iSave(App_User user) {
         appUserRepository.save(user);
     }
 
     @Override
-    public void remove(Long id) {
+    public void iRemove(Long id) {
         appUserRepository.deleteById(id);
     }
 }

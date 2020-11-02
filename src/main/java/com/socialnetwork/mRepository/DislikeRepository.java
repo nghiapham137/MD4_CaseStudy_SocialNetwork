@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface DislikeRepository extends CrudRepository<Dislikes, Long> {
-    Optional<Dislikes> findAllDislikes();
-    Dislikes findDislikesById(Long id);
+    Iterable<Dislikes> findAll();
+    Optional<Dislikes> findById(Long id);
 }

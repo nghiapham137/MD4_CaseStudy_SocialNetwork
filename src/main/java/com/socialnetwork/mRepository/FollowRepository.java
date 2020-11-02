@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface FollowRepository extends CrudRepository<Follow, Long> {
-    Optional<Follow> findAllFollow();
-    Follow findFollowById(Long id);
+    Iterable<Follow> findAll();
+    Optional<Follow> findById(Long id);
 }

@@ -5,8 +5,8 @@ import com.socialnetwork.model.Likes;
 import java.util.Optional;
 
 public interface ILikeService {
-    Optional<Likes> findAllLike();
-    Likes findLikeById(Long id);
-    Likes saveLike(Likes Likes);
-    void removeLikeById(Long id);
+    Iterable<Likes> iFindAll();
+    Optional<Likes> iFindById(Long id);
+    Likes iSave(Likes Likes);
+    void iRemove(Long id);
 }

@@ -5,8 +5,8 @@ import com.socialnetwork.model.Comments;
 import java.util.Optional;
 
 public interface ICommentService {
-    Optional<Comments> findAllComments();
-    Comments findCommentsById(Long id);
-    Comments saveComments(Comments comments);
-    void removeCommentsById(Long id);
+    Iterable<Comments> iFindAll();
+    Optional<Comments> iFindById(Long id);
+    Comments iSave(Comments comments);
+    void iRemove(Long id);
 }

@@ -1,6 +1,6 @@
 package com.socialnetwork.model;
 
-import com.socialnetwork.repository.post.PostRepository;
+//import com.socialnetwork.repository.post.PostRepository;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -5,8 +5,8 @@ import com.socialnetwork.model.Dislikes;
 import java.util.Optional;
 
 public interface IDislikeService {
-    Optional<Dislikes> findAllDislike();
-    Dislikes findDislikeById(Long id);
-    Dislikes saveDislike(Dislikes dislikes);
-    void removeDislikeById(Long id);
+    Iterable<Dislikes> iFindAll();
+    Optional<Dislikes> iFindById(Long id);
+    Dislikes iSave(Dislikes dislikes);
+    void iRemove(Long id);
 }

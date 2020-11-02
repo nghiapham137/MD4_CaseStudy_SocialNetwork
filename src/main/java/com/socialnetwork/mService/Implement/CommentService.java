@@ -13,22 +13,22 @@ public class CommentService implements ICommentService {
     private CommentRepository commentRepository;
 
     @Override
-    public Optional<Comments> findAllComments() {
-        return commentRepository.findAllComments();
+    public Iterable<Comments> iFindAll() {
+        return commentRepository.findAll();
     }
 
     @Override
-    public Comments findCommentsById(Long id) {
-        return commentRepository.findCommentsById(id);
+    public Optional<Comments> iFindById(Long id) {
+        return commentRepository.findById(id);
     }
 
     @Override
-    public Comments saveComments(Comments comments) {
+    public Comments iSave(Comments comments) {
         return commentRepository.save(comments);
     }
 
     @Override
-    public void removeCommentsById(Long id) {
+    public void iRemove(Long id) {
         commentRepository.deleteById(id);
     }
 }

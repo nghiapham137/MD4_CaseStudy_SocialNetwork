@@ -12,23 +12,24 @@ public class FollowService implements IFollowService {
     @Autowired
     private FollowRepository followRepository;
 
+
     @Override
-    public Optional<Follow> findAllFollow() {
-        return followRepository.findAllFollow();
+    public Iterable<Follow> iFindAll() {
+        return followRepository.findAll();
     }
 
     @Override
-    public Follow findFollowById(Long id) {
-        return followRepository.findFollowById(id);
+    public Optional<Follow> iFindById(Long id) {
+        return followRepository.findById(id);
     }
 
     @Override
-    public Follow saveFollow(Follow follow) {
+    public Follow iSave(Follow follow) {
         return followRepository.save(follow);
     }
 
     @Override
-    public void removeFollowById(Long id) {
+    public void iRemove(Long id) {
         followRepository.deleteById(id);
     }
 }

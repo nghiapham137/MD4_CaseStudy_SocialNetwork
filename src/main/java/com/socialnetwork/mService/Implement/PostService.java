@@ -13,22 +13,22 @@ public class PostService implements IPostService {
     private PostRepository postRepository;
 
     @Override
-    public Optional<Posts> findAllPosts() {
-        return postRepository.findAllPosts();
+    public Iterable<Posts> iFindAll() {
+        return postRepository.findAll();
     }
 
     @Override
-    public Posts findPostsById(Long id) {
-        return postRepository.findPostsById(id);
+    public Optional<Posts> iFindById(Long id) {
+        return postRepository.findById(id);
     }
 
     @Override
-    public Posts savePosts(Posts posts) {
-        return postRepository.save(posts);
+    public Posts iSave(Posts post) {
+        return postRepository.save(post);
     }
 
     @Override
-    public void removePostsById(Long id) {
+    public void iRemove(Long id) {
         postRepository.deleteById(id);
     }
 }

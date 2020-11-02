@@ -5,8 +5,8 @@ import com.socialnetwork.model.Posts;
 import java.util.Optional;
 
 public interface IPostService {
-    Optional<Posts> findAllPosts();
-    Posts findPostsById(Long id);
-    Posts savePosts(Posts Posts);
-    void removePostsById(Long id);
+    Iterable<Posts> iFindAll();
+    Optional<Posts> iFindById(Long id);
+    Posts iSave(Posts Posts);
+    void iRemove(Long id);
 }

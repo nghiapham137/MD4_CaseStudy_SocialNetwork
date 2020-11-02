@@ -5,8 +5,8 @@ import com.socialnetwork.model.App_User;
 import java.util.Optional;
 
 public interface IAppUserService {
-        Iterable<App_User> findAllAppUser();
-        App_User findAppUserById(Long id);
-        void save(App_User user);
-        void remove(Long id);
+        Iterable<App_User> iFindAll();
+        Optional<App_User> iFindById(Long id);
+        void iSave(App_User user);
+        void iRemove(Long id);
 }
