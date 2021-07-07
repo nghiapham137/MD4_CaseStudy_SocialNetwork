@@ -22,5 +22,4 @@ public class App_User {
     private boolean active;
     private String roles;
 
-
 }
